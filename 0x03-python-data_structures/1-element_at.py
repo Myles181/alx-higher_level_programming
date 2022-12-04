@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 def element_at(my_list, idx):        
     i = 0
-    element = 0
     if idx < 0:
         return None
 
@@ -10,5 +9,6 @@ def element_at(my_list, idx):
 
     for e in my_list:
         if i is idx:
-            element = e
-    return element
+            return e
+        else:
+            i += 1
