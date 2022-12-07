@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import print101
+import print_101
