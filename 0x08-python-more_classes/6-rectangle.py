@@ -11,11 +11,13 @@ class Rectangle:
         width (int)
         height (int)
     '''
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         '''Initialisation with args width and height'''
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -46,3 +48,29 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
+    def area(self):
+        '''area of rectangle'''
+        return (self.__width * self.__height)
+
+    def perimeter(self):
+        '''perimeter of rectangle'''
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return ((self.__width + self.__height) * 2)
+
+    def __str__(self):
+        '''returns rectangle with the char #'''
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return ("\n".join(["".join(["#" for i in range(self.__width)])
+                for j in range(self.__height)]))
+
+    def __repr__(self):
+        '''return a string representation of the rectangle'''
+        return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        print("Bye rectangle...")
+        if Rectangle.number_of_instances != 0:
+            Rectangle.number_of_instances -= 1
