@@ -1,7 +1,7 @@
-#SQL Introduction
+# SQL Introduction
 This project is aboutthe basics of sql
 
-##Files
+## Files
 0-list_databases.sql  15-groups.sql                     5-full_table.sql
 10-top_score.sql      16-no_link.sql                    6-list_values.sql
 11-best_score.sql     1-create_database_if_missing.sql  7-insert_value.sql
