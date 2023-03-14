@@ -8,7 +8,7 @@ if (isNaN(size)) {
   console.log('Missing size');
 } else {
   for (i = 0; i < size; i++) {
-    row = ''
+    row = '';
     for (j = 0; j < size; j++) {
       row += 'X';
     }
