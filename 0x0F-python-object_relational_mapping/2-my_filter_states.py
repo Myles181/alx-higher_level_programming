@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+    List all rows of states in ascending order by ID
+    Where name column is specified
+"""
 import MySQLdb
 import sys
 

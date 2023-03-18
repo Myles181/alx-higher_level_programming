@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+"""
+    List all columns of state by ascending order of their id
+"""
 import MySQLdb
 import sys
 
@@ -18,3 +21,4 @@ if __name__ == "__main__":
         print(db[i])
 
     cursor.close()
+    conn.close()

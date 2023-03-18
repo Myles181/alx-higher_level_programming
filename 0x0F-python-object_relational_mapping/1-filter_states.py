@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+"""
+    List all columns that name column starts from N
+"""
 import MySQLdb
 import sys
 
