@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
 """
-    Write a script that lists all State objects
+    Write a script that display the 
+    state.id of a given state.name
+    from States object
     from the database hbtn_0e_6_usa
 """
 
