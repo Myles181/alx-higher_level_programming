@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    Write a script that display the 
+    Write a script that display the
     state.id of a given state.name
     from States object
     from the database hbtn_0e_6_usa
@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     query = session.query(State).order_by(State.id.asc())
     states = query.all()
-    state_list  = []
+    state_list = []
 
     for state in states:
         state_list.append(state.name)
@@ -39,5 +39,5 @@ if __name__ == "__main__":
                 print("{}".format(state.id))
     else:
         print("Not found")
-    
+
     session.close()
