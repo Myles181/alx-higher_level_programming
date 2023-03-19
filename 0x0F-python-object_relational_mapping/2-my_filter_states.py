@@ -14,9 +14,12 @@ if __name__ == "__main__":
             )
     name = sys.argv[4]
     cur = conn.cursor()
-    cur.execute(
-            "SELECT * FROM states WHERE name='{:s}' ORDER BY id ASC".format(name))
-    columns = cur.fetchall()
+    cur.execute("SELECT * FROM states\
+                WHERE name='{:s}' ORDER BY id ASC".format(name))
+    rows = cur.fetchall()
 
-    for column in columns:
-        print(column)
+    for row in rows:
+        print(row)
+
+    cur.close()
+    db.close()

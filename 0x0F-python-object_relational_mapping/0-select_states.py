@@ -16,9 +16,9 @@ if __name__ == "__main__":
     """ Create a cursor object """
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
-    db = cursor.fetchall()
-    for i in range(len(db)):
-        print(db[i])
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
 
     cursor.close()
     conn.close()
