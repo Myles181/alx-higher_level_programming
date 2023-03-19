@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-    List all rows of cities
+    List all rows of cities table and
+    join rows of states table
 """
 import MySQLdb
 import sys
@@ -17,7 +18,9 @@ if __name__ == "__main__":
             )
     cur = conn.cursor()
 
-    cur.execute("SELECT id, name FROM cities ORDER BY cities.id ASC")
+    cur.execute("SELECT cities.id, cities.name, states.name FROM cities\
+                RIGHT JOIN states ON states.id = cities.state_id\
+                ORDER BY cities.id ASC")
     columns = cur.fetchall()
 
     for column in columns:
