@@ -14,5 +14,6 @@ class State(Base):
     __tablename__ = "states"
 
     """ Identify table's column """
-    id = Column(Integer, autoincrement = True, primary_key = True, nullable = True)
+    id = Column(Integer, autoincrement = True,
+                primary_key = True, nullable = True)
     name = Column(String(128), nullable = True)
