@@ -27,7 +27,7 @@ if __name__ == "__main__":
     query = session.query(State).order_by(State.id.asc())
     states = query.first()
 
-    if (states.id and states.name) != None:
+    if (states.id != None) and (states.name != None):
         print("{}: {}".format(states.id, states.name))
     else:
         print("")
