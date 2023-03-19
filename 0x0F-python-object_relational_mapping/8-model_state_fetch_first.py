@@ -24,12 +24,12 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State).order_by(State.id.asc()).limit(1)
-    states = query.all()
+    query = session.query(State).order_by(State.id.asc())
+    states = query.first()
 
-
-    for state in states:
-        if (state.id and state.name) != None:
-            print("{}: {}".format(state.id, state.name))
+    if (states.id and states.name) != None:
+        print("{}: {}".format(states.id, states.name))
+    else:
+        print("")
 
     session.close()
