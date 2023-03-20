@@ -24,19 +24,12 @@ if __name__ == "__main__":
     session = Session()
 
     """ Create new class data """
-    newState = State()
-    newState.name = "Loisiana"
+    newState = State(name = "Loisiana")
 
     """ Add Data to table """
     session.add(newState)
     session.commit()
 
-    """ Create query """
-    query = session.query(State).order_by(State.id.asc())
-    states = query.all()
-
-    for state in states:
-        if state.name == "Loisiana":
-            print("{}".format(state.id))
+    print("{}".format(newState.id))
 
     session.close()
