@@ -24,12 +24,11 @@ if __name__ == "__main__":
     session = Session()
 
     """ Create new class data """
-    newState = State(name = "Loisiana")
-
-    """ Add Data to table """
-    session.add(newState)
+    new = State(name="Loisiana")
+    session.add(new)
+    new_state = session.query(State).filter(State.name == 'Louisiana').first()
     session.commit()
 
-    print("{}".format(newState.id))
+    print("{}".format(new_state.id))
 
     session.close()
