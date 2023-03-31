@@ -1,8 +1,3 @@
 #!/usr/bin/bash
-#Take in a URL and display the size in bytes
-
-if [ $# -eq 0 ]; then
-	echo "Usage: $0 URL"
-else
-	curl -s $1 | wc -c
-fi
+#Send "GET" request to a server and Display body of content
+curl -sL GET "$1"
