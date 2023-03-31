@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 #Take in a URL and display the size in bytes
 
 if [ $# -eq 0 ]; then
