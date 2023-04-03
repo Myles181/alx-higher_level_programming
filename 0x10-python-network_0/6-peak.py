@@ -2,6 +2,12 @@
 #Find the peak value
 
 def find_peak(list_of_integers):
+    """
+        Usage: Find the peak value of a list
+        Attributes:
+            list_of_integers: A list of integers
+        Return: peak value
+    """
     if not list_of_integers:
         return None
 
