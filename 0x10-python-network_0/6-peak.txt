@@ -1,0 +1,2 @@
+# time complexity of find_peak(list_of_integers)
+O(log(n))
