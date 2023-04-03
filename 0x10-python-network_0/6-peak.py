@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+#Find the peak value
+
 def find_peak(list_of_integers):
     if not list_of_integers:
         return None
